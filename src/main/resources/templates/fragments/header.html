@@ -23,20 +23,20 @@
             <div class="navbar-body">
                 <!--Left side-->
                 <ul class="navbar-nav">
-                    <li>
+                    <li th:classappend="${#httpServletRequest.getRequestURI() == '/' or #httpServletRequest.getRequestURI() == '/home' ? 'active' : ''}">
                         <a th:text="#{navbar.home}" href="#" th:href="@{/}"></a>
                     </li>
-                    <li>
+                    <li th:classappend="${#httpServletRequest.getRequestURI() == '/me' ? 'active' : ''}">
                         <a th:text="#{navbar.profile}" href="/me" th:href="@{/me}"></a>
                     </li>
                 </ul>
 
                 <!--Right side-->
                 <ul class="navbar-nav navbar-right">
-                    <li>
+                    <li th:classappend="${#httpServletRequest.getRequestURI() == '/login' ? 'active' : ''}">
                         <a th:text="#{navbar.signin}" href="/login" th:href="@{/login}"></a>
                     </li>
-                    <li>
+                    <li th:classappend="${#httpServletRequest.getRequestURI() == '/register' ? 'active' : ''}">
                         <a th:text="#{navbar.signup}" href="/register" th:href="@{/register}"></a>
                     </li>
                 </ul>

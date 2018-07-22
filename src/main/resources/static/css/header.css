@@ -2,7 +2,7 @@
     overflow: hidden;
     background-color: #f1f1f1;
     color: #f1f1f1;
-    padding: 20px 40px;
+    padding: 20px 35px;
     position: sticky;
     top: 0;
     margin-bottom: 30px;
@@ -29,11 +29,6 @@
     alignment: center;
     font-family: Monospaced;
     font-size: 28px;
-}
-
-.navbar-body a.active {
-    background-color: dodgerblue;
-    color: white;
 }
 
 .navbar-right {
@@ -64,7 +59,13 @@
     text-decoration: none;
 }
 
-.navbar-body li a:hover {
+.navbar-nav li:hover {
     background-color: #111111;
+    color: #111111;
+}
+
+.navbar-nav li.active {
+    background-color: dodgerblue;
+    color: white;
 }
 

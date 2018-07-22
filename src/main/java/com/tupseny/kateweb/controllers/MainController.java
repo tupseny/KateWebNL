@@ -41,4 +41,14 @@ public class MainController {
         return "/errors/403";
     }
 
+    @GetMapping("/me")
+    public String profile(){
+        return "/profile";
+    }
+
+    @GetMapping("/register")
+    public String register(){
+        return "/register";
+    }
+
 }
