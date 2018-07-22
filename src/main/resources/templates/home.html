@@ -1,26 +1,59 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
 <head>
-    <title>Spring Boot Thymeleaf + Spring Security</title>
+    <title>Test</title>
 
+    <div th:replace="fragments/header :: header-main"></div>
     <div th:replace="fragments/header :: header-css"></div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 
 <div th:replace="fragments/header :: header"></div>
 
 <div class="container">
+    <!--Language bar-->
+    <span th:text="#{lang.change}"></span>
 
-    <div class="starter-template">
-        <h1>Spring Boot Web Thymeleaf + Spring Security</h1>
-        <h2>1. Visit <a th:href="@{/admin}">Admin page (Spring Security protected, Need Admin Role)</a></h2>
-        <h2>2. Visit <a th:href="@{/user}">User page (Spring Security protected, Need User Role)</a></h2>
-        <h2>3. Visit <a th:href="@{/about}">Normal page</a></h2>
+    <select id="locales">
+        <option value=""></option>
+        <option value="en" th:text="#{lang.eng}"></option>
+        <option value="et" th:text="#{lang.et}"></option>
+        <option value="de" th:text="#{lang.de}"></option>
+        <option value="ru" th:text="#{lang.ru}"></option>
+    </select>
+
+    <div>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
+        <p th:text="text" style="padding-bottom: 20px"></p>
     </div>
 
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#locales").change(function () {
+                var selectedOption = $('#locales').val();
+                if (selectedOption !== ''){
+                    window.location.replace('home?lang=' + selectedOption);
+                }
+            });
+        });
+    </script>
 </div>
-<!-- /.container -->
 
 <div th:replace="fragments/footer :: footer"></div>
 
