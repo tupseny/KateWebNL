@@ -51,4 +51,9 @@ public class MainController {
         return "/register";
     }
 
+    @GetMapping("/logout")
+    public String logout(){
+        return "/home";
+    }
+
 }

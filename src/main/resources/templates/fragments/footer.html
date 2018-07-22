@@ -8,19 +8,15 @@
 <div th:fragment="footer">
 
     <div class="container">
-
-        <footer>
-            © 2018 <- SITE NAME ->
-            <span sec:authorize="isAuthenticated()">
-                | Logged user: <span sec:authentication="name"></span> |
-                Roles: <span sec:authentication="principal.authorities"></span> |
-                <a th:href="@{/logout}">Sign Out</a>
-            </span>
-
-
+        <footer class="footer">
+            <div class="footer-copyright">
+                <a th:text="#{footer.copyright}"></a>
+            </div>
+            <div class="footer-user">
+                <a th:text="#{user.admin}"></a>
+            </div>
         </footer>
     </div>
-
 </div>
 </body>
 </html>

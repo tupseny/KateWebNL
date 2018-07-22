@@ -1,8 +1,12 @@
+body{
+    padding: 10px 30px                                                  ;
+}
+
 .navbar{
     overflow: hidden;
     background-color: #f1f1f1;
     color: #f1f1f1;
-    padding: 20px 35px;
+    padding: 10px 25px;
     position: sticky;
     top: 0;
     margin-bottom: 30px;
@@ -10,7 +14,7 @@
 
 .navbar-header{
     display: inline-block;
-    padding: 10px 60px 5px 20px;
+    padding: 16px 60px 8px 8px;
 
 }
 
@@ -27,8 +31,8 @@
 
 .navbar-header a{
     alignment: center;
-    font-family: Monospaced;
-    font-size: 28px;
+    font-family: monospace;
+    font-size: 2.5em;
 }
 
 .navbar-right {
