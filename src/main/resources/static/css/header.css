@@ -14,8 +14,8 @@ body{
 
 .navbar-header{
     display: inline-block;
-    padding: 16px 60px 8px 8px;
-
+    padding: 16px 8px 8px 8px;
+    width: 100%;
 }
 
 .navbar a{
@@ -71,5 +71,25 @@ body{
 .navbar-nav li.active {
     background-color: dodgerblue;
     color: white;
+}
+
+#lang-panel{
+    float: right;
+    padding: 5px 30px 5px 10px;
+}
+
+#lang-panel a{
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 2px 4px;
+    border-radius: 0px;
+    border-right: 1px solid black;
+}
+
+#lang-panel a:last-child{
+    border: 0px;
 }
 

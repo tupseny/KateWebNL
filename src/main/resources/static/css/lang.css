@@ -1,0 +1,7 @@
+#lang-panel a{
+    color: aqua;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: 2px aqua;
+}

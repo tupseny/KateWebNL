@@ -17,7 +17,16 @@
             <!--Header-->
             <div class="navbar-header">
                 <a class="navbar-logo" th:text="#{navbar.title}"></a>
+
+                <!--Language bar-->
+                <span th:text="#{lang.change}"></span>
+                <div id="lang-panel">
+                    <a th:href="@{#}" th:text="#{lang.eng}" id="en"></a>
+                    <a th:href="@{#}" th:text="#{lang.ru}" id="ru"></a>
+                </div>
             </div>
+
+
 
             <!--Body-->
             <div class="navbar-body">
@@ -43,5 +52,17 @@
             </div>
         </div>
     </div>
+
+    <!--Scripts-->
+    <!--Language-->
+    <script type="text/javascript" th:fragment="header-scripts">
+        $("#lang-panel a").click(function () {
+            var lang = $(this).attr("id");
+            // alert("Clicked: " + lang);
+            if (lang !== ''){
+                window.location.replace('?lang=' + lang);
+            }
+        });
+    </script>
 </body>
 </html>

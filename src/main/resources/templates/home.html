@@ -4,9 +4,12 @@
 <head>
     <title>Test</title>
 
+    <!--Meta-->
     <div th:replace="fragments/header :: header-main"></div>
-    <div th:replace="fragments/header :: header-css"></div>
 
+    <!--CSS-->
+    <div th:replace="fragments/header :: header-css"></div>
+    <div th:replace="fragments/footer :: footer-css"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
@@ -15,22 +18,12 @@
 <div th:replace="fragments/header :: header"></div>
 
 <div class="container">
-    <!--Language bar-->
-    <span th:text="#{lang.change}"></span>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#locales").change(function () {
-                var selectedOption = $('#locales').val();
-                if (selectedOption !== ''){
-                    window.location.replace('home?lang=' + selectedOption);
-                }
-            });
-        });
-    </script>
 </div>
 
 <div th:replace="fragments/footer :: footer"></div>
+
+<div th:replace="fragments/header :: header-scripts"></div>
 
 </body>
 </html>

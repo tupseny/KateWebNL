@@ -2,6 +2,10 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
+    <div th:fragment="footer-css">
+        <link rel="stylesheet" th:href="@{/css/footer.css}"
+              href="../../static/css/footer.css" />
+    </div>
 </head>
 
 <body>
@@ -9,19 +13,13 @@
 
     <div class="container">
         <footer class="footer">
-            <select id="locales">
-                <option value=""></option>
-                <option value="en" th:text="#{lang.eng}"></option>
-                <option value="et" th:text="#{lang.et}"></option>
-                <option value="de" th:text="#{lang.de}"></option>
-                <option value="ru" th:text="#{lang.ru}"></option>
-            </select>
-
-            <div class="footer-copyright">
-                <a th:text="#{footer.copyright}"></a>
-            </div>
-            <div class="footer-user">
-                <a th:text="#{user.admin}"></a>
+            <div class="footer-inside">
+                <div class="footer-copyright">
+                    <a th:text="#{footer.copyright}"></a>
+                </div>
+                <div class="footer-user">
+                    <a th:text="#{user.admin}"></a>
+                </div>
             </div>
         </footer>
     </div>
