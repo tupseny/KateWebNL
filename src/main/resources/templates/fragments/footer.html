@@ -10,19 +10,17 @@
 
 <body>
 <div th:fragment="footer">
-
-    <div class="container">
-        <footer class="footer">
-            <div class="footer-inside">
-                <div class="footer-copyright">
-                    <a th:text="#{footer.copyright}"></a>
-                </div>
-                <div class="footer-user">
-                    <a th:text="#{user.admin}"></a>
-                </div>
+    <footer class="footer">
+        <div class="footer-inside">
+            <div class="footer-user">
+                <a th:text="#{user.admin}"></a>
             </div>
-        </footer>
-    </div>
+
+            <div class="footer-copyright">
+                <a th:text="#{footer.copyright}"></a>
+            </div>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
