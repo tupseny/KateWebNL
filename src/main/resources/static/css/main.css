@@ -1,0 +1,15 @@
+#newPostBut {
+    background-color:transparent;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: Verdana, serif;
+    font-size:17px;
+    font-weight:bold;
+    padding: 8px 12px;
+    text-decoration:none;
+    text-shadow:-1px 0px 16px #c70067;
+}
+#newPostBut:hover {
+    background-color:#ef027d;
+}

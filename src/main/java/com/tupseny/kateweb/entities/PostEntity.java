@@ -1,6 +1,11 @@
-package com.tupseny.kateweb;
+package com.tupseny.kateweb.entities;
 
-public class Post {
+import javax.persistence.Entity;
+
+@Entity
+public class PostEntity {
+
+
     private String title;
     private String text;
 

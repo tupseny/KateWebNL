@@ -10,8 +10,9 @@
     <!--CSS-->
     <div th:replace="fragments/header :: header-css"></div>
     <div th:replace="fragments/footer :: footer-css"></div>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="/static/css/main.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
@@ -20,15 +21,13 @@
     <div class="news">
         <div class="news-header">
             <div class="news-menu-create">
-                <button th:text="#{post.menu.create}" id="newPostBut"></button>
+                <a th:text="#{post.menu.create}" id="newPostBut" class="post.menu.create.but"
+                   href="#" th:href="@{/news/create}" th:method="post"></a>
             </div>
-            <div class="news-menu-create-text" id="newPostField" hidden>
-                <form class="news-new-form" method="post" action="#" th:action="@{/newPost}" >
-
-                    <input type="text" name="title" class="news-new-title-input">
-                    <input type="text" name="text" class="news-new-text-input">
-                    <button type="submit" name="submit" th:text="#{post.new.create.button}"></button>
-                </form>
+            <div class="news-menu-create-text" id="newPostList" hidden>
+                <ul id="newsList">
+                    <li></li>
+                </ul>
             </div>
         </div>
         <div class="news-body">
@@ -45,13 +44,15 @@
 <!--Scripts-->
 <div th:replace="fragments/header :: header-scripts"></div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 <script type="application/javascript">
     $(document).ready(function () {
         var createBut = $("#newPostBut");
         var postField = $("#newPostField");
 
         createBut.click(function () {
-            createBut.hide();
+            // createBut.hide();
             postField.show();
         });
 
